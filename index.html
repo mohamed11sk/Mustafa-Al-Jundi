@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>الموقع الرسمي لفضيلة الشيخ  مصطفي الجندي الأزهري</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&family=El+Messiri:wght@600&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L0MYC5MFH9"></script>
+</head>
+
+<body>
+
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <button class="prayer-toggle-btn" id="prayerToggleBtn">
+    <i class="fas fa-mosque"></i>
+    <span>أوقات الصلاة</span>
+  </button>
+
+  <div class="prayer-times-container" id="prayerTimesContainer">
+    <div class="prayer-times-header">
+      <div>
+        <i class="fas fa-mosque"></i>
+        <span id="currentPrayerTitle">أوقات الصلاة</span>
+      </div>
+      <div id="prayerLocation">القاهرة، مصر</div>
+    </div>
+
+    <div class="prayer-time" id="fajrTime">
+      <span class="prayer-name">الفجر</span>
+      <span class="prayer-value" id="fajrValue">--:--</span>
+    </div>
+
+    <div class="prayer-time" id="dhuhrTime">
+      <span class="prayer-name">الظهر</span>
+      <span class="prayer-value" id="dhuhrValue">--:--</span>
+    </div>
+
+    <div class="prayer-time" id="asrTime">
+      <span class="prayer-name">العصر</span>
+      <span class="prayer-value" id="asrValue">--:--</span>
+    </div>
+
+    <div class="prayer-time" id="maghribTime">
+      <span class="prayer-name">المغرب</span>
+      <span class="prayer-value" id="maghribValue">--:--</span>
+    </div>
+
+    <div class="prayer-time" id="ishaTime">
+      <span class="prayer-name">العشاء</span>
+      <span class="prayer-value" id="ishaValue">--:--</span>
+    </div>
+
+    <div class="location-info" id="locationInfo">
+      جاري تحديد الموقع...
+    </div>
+
+    <button class="refresh-btn" id="refreshPrayerTimes">
+      <i class="fas fa-sync-alt"></i> تحديث
+    </button>
+  </div>
+
+  <div class="container">
+    <div class="header">
+      <div class="mosque-icon">
+        <i class="fas fa-mosque"></i>
+      </div>
+      <h1>فضيلة الشيخ الدكتور<br> مصطفي الجندي</h1>
+      <p>إنضم مع فضيلة الشيخ لمتابعة التلاوات   و الابتهالات  من جامع  خاتم المرسلين  🕌</p>
+
+      <div class="random-ayah scroll-effect">
+        <div class="text" id="randomAyahText">"يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ وَقُولُوا قَوْلًا
+          سَدِيدًا"</div>
+        <div class="surah-name">سورة الأحزاب - الآية 70</div>
+      </div>
+
+    </div>
+
+    <div class="social-links">
+      <a href="https://t.me/Mostafa_Elgende" target="_blank" class="social-card telegram scroll-effect"
+      data-ayah="وَقُل رَّبِّ زِدْنِي عِلْمًا" data-surah="طه: 114">
+      <div class="social-icon"><i class="fab fa-telegram-plane"></i></div>
+      <div class="social-name">تليجرام </div>
+    </a>
+      <a href="https://www.facebook.com/profile.php?id=61573542313851&rdid=jbjgXyLOIFWfI9k2&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1AHJ1oTDE1%2F#" target="_blank"
+        class="social-card facebook scroll-effect"
+        data-ayah="وَتَعَاوَنُوا عَلَى الْبِرِّ وَالتَّقْوَىٰ ۖ وَلَا تَعَاوَنُوا عَلَى الْإِثْمِ وَالْعُدْوَانِ ۚ وَاتَّقُوا اللَّهَ ۖ إِنَّ اللَّهَ شَدِيدُ الْعِقَابِ"
+        data-surah="المائدة: 2">
+        <div class="social-icon"><i class="fab fa-facebook-f"></i></div>
+        <div class="social-name">فيسبوك</div>
+      </a>
+
+      <a href="https://www.tiktok.com/@mostafagendy7?_t=ZS-8vQZlU8biR2&_r=1" target="_blank"
+      class="social-card tiktok scroll-effect"
+      data-ayah="ادْعُ إِلَىٰ سَبِيلِ رَبِّكَ بِالْحِكْمَةِ وَالْمَوْعِظَةِ الْحَسَنَةِ ۖ وَجَادِلْهُم بِالَّتِي هِيَ أَحْسَنُ"
+      data-surah="النحل: 125">
+      <div class="social-icon"><i class="fab fa-tiktok"></i></div>
+      <div class="social-name">تيك توك</div>
+    </a>
+
+      <a href="" target="_blank"
+        class="social-card youtube scroll-effect"
+        data-ayah="وَمَنْ أَحْسَنُ قَوْلًا مِّمَّن دَعَا إِلَى اللَّهِ وَعَمِلَ صَالِحًا وَقَالَ إِنَّنِي مِنَ الْمُسْلِمِينَ"
+        data-surah="فصلت: 33">
+        <div class="social-icon"><i class="fab fa-youtube"></i></div>
+        <div class="social-name">يوتيوب</div>
+      </a>
+
+    
+
+     
+
+      <a href="javascript:location.reload();" class="social-card website scroll-effect"
+        data-ayah="إِنَّمَا يَعْمُرُ مَسَاجِدَ اللَّهِ مَنْ آمَنَ بِاللَّهِ وَالْيَوْمِ الْآخِرِ"
+        data-surah="التوبة: 18">
+        <div class="social-icon"><i class="fas fa-globe-africa"></i></div>
+        <div class="social-name">الموقع الرسمي</div>
+        <br>
+        <h3>قريبا...</h3>
+      </a>
+    </div>
+
+    <div class="signature scroll-effect">
+      © جميع الحقوق محفوظة - الموقع الرسمي لفضيلة الشيخ الدكتور<br>
+      مصطفي الجندي<br>
+      <span id="currentDate"></span> <br>جامع خاتم المرسلين  🕌
+    </div>
+  </div>
+
+  <button onclick="scrollToTop()" id="scrollTopBtn" title="العودة للأعلى"><i class="fas fa-arrow-up"></i></button>
+
+
+  <button onclick="shareWebsite()" id="shareBtn" title="مشاركة الموقع"><i class="fas fa-share-alt"></i></button>
+
+  
+<script src="main.js"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-L0MYC5MFH9');
+</script>
+
+</body>
+
+</html>
